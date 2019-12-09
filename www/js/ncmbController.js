@@ -17,7 +17,6 @@ sendScore: function(score) {
 
     // [2]インスタンス生成、スコア数値をフィールド名"score"にセット
     var scoreData = new Score({score: score});
-
     // [3]送信処理
     scoreData.save()
         .then(function (saved) {
@@ -54,4 +53,5 @@ Score.greaterThan("score", score)
         self.ncmb = new NCMB(self.APPLICATION_KEY, self.CLIENT_KEY);    // mobile backendの初期化
         self.screenSize = screenSize;
     }
+    
 }
